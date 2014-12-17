@@ -7,9 +7,9 @@ parks = hash
 
 result = {}
 
-  parks.each do |park|
-    result[park[:id]] ||= {}
-    result[park[:id]].merge!(park)
-  end
+parks.each do | park |
+  result["#{park[:state]}, #{park[:country]}"] ||= []
+  result["#{park[:state]}, #{park[:country]}"] << park
+end
 
 pp result

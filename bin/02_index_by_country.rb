@@ -8,8 +8,8 @@ parks = hash
 result = {}
 
   parks.each do |park|
-    result[park[:id]] ||= {}
-    result[park[:id]].merge!(park)
+    result[park[:country]] ||= []
+    result[park[:country]] << park
   end
 
 pp result
